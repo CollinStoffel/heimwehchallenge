@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heimweh Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23111'/%3E%3Ctext x='50' y='70' font-family='Arial' font-size='60' font-weight='bold' text-anchor='middle' fill='%23ff3c5a'%3EH%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <meta name="description" content="Nimm an der Heimweh Challenge teil, erstelle ein kreatives TikTok-Video mit dem Song Heimweh und gewinne tolle Preise!">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">HEIMWEH <span class="logo-accent">CHALLENGE</span></div>
+                <div class="mobile-menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="#challenge" class="nav-link">Challenge</a></li>
+                    <li><a href="#lyrics" class="nav-link">Lyrics</a></li>
+                    <li><a href="#prizes" class="nav-link">Preise</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="glitch-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="HEIMWEH">HEIMWEH<br><span>CHALLENGE</span></h1>
+                <div class="subtitle">SAG UNS WEN ODER WAS DU VERMISST</div>
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Tage</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Stunden</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minuten</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Sekunden</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section id="challenge" class="challenge">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">DIE CHALLENGE</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="challenge-steps">
+                <div class="step reveal-element">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fas fa-video"></i></div>
+                    <h3>VIDEO ERSTELLEN</h3>
+                    <p>Erstelle ein kreatives TikTok-Video mit dem Song "Heimweh" und zeige deine einzigartige Interpretation</p>
+                </div>
+                <div class="step reveal-element" data-delay="0.2">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fas fa-music"></i></div>
+                    <h3>SOUND BENUTZEN</h3>
+                    <p>Benutze den Sound in deinem Video und zeige uns auf kreative Weise, wen oder was du vermisst</p>
+                </div>
+                <div class="step reveal-element" data-delay="0.4">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>#HEIMWEH BENUTZEN</h3>
+                    <p>Füge den Hashtag #heimweh zu deinem Video hinzu, um teilzunehmen und die Chance auf tolle Preise zu haben</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-particles"></div>
+    </section>
+
+    <section class="stats-counter">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="remaining-days-stat" data-count="0">0</div>
+                    <div class="stat-label">TAGE VERBLEIBEND</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="600">0</div>
+                    <div class="stat-label">EURO PREISGELDER</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lyrics" class="lyrics">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">LYRICS</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="lyrics-intro reveal-element">
+                <p>Benutze diese Lyrics für deine kreative Interpretation und zeige uns, wie du den Song "Heimweh" in deinem Video darstellst.</p>
+            </div>
+            <div class="play-button-container reveal-element">
+                <button id="playButton" class="play-button">
+                    <i class="fas fa-play"></i> SOUND ANHÖREN
+                </button>
+                <audio id="songAudio" src="assets/heimweh-preview.mp3"></audio>
+            </div>
+            <div class="lyrics-content">
+                <div class="lyrics-text reveal-element">
+                    <h3>[Pre-Hook: Dorian]</h3>
+                    <p>Sag nicht, dass du schon heimgehst<br>
+                    Bitte komm zurück, denn ich hab' Heimweh<br>
+                    Ich weiß, du denkst an mich, wenn du nachts einschläfst<br>
+                    Auf der Rolex Submariner bleibt die Zeit steh'n, die Zeit steh'n</p>
+                </div>
+                <div class="lyrics-text reveal-element" data-delay="0.2">
+                    <h3>[Hook: D1NO]</h3>
+                    <p>Und ich hab' Heimweh<br>
+                    Weil, Babe, du bist nicht bei mir<br>
+                    Kann sein, dass ich heute reingeh'<br>
+                    Auf Straße zu viel riskiert<br>
+                    Unsre Liebe, die du auf Eis legst<br>
+                    Ich hab' nichts mehr zu verlier'n<br>
+                    Baby, komm, ich hab' Heimweh, Heimweh</p>
+                </div>
+            </div>
+        </div>
+        <div class="lyrics-bg-waves"></div>
+    </section>
+
+    <section id="prizes" class="prizes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal-text">PREISE</h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="prizes-grid">
+                <div class="prize reveal-element">
+                    <div class="prize-rank">1</div>
+                    <div class="prize-content">
+                        <div class="prize-badge"><i class="fas fa-crown"></i></div>
+                        <h3>300 EURO</h3>
+                        <div class="prize-highlight">+ 2 VIP TICKETS</div>
+                        <p>Zum Live-Event mit exklusivem Backstage-Zugang und persönlichem Meet & Greet mit den Künstlern von ICON 6</p>
+                        <div class="prize-glow"></div>
+                    </div>
+                </div>
+                <div class="prize reveal-element" data-delay="0.2">
+                    <div class="prize-rank">2</div>
+                    <div class="prize-content">
+                        <div class="prize-badge"><i class="fas fa-medal"></i></div>
+                        <h3>200 EURO</h3>
+                        <div class="prize-highlight">+ 4 TICKETS</div>
+                        <p>Zum Live-Event mit deinen Freunden und erlebe die Künstler hautnah</p>
+                        <div class="prize-glow"></div>
+                    </div>
+                </div>
+                <div class="prize reveal-element" data-delay="0.4">
+                    <div class="prize-rank">3</div>
+                    <div class="prize-content">
+                        <div class="prize-badge"><i class="fas fa-award"></i></div>
+                        <h3>100 EURO</h3>
+                        <div class="prize-highlight">+ 4 TICKETS</div>
+                        <p>Zum Live-Event und feiere zusammen mit deinen Freunden</p>
+                        <div class="prize-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bonus-prize reveal-element">
+                <div class="bonus-badge">BONUS</div>
+                <p>Alle Teilnehmer haben außerdem die Chance auf ein Feature in unseren Social Media Kanälen!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tiktok-preview">
+        <div class="container">
+            <div class="tiktok-preview-content">
+                <div class="phone-mockup reveal-element">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="tiktok-ui">
+                                <div class="tiktok-header">
+                                    <div class="tiktok-logo"><i class="fab fa-tiktok"></i></div>
+                                    <div class="tiktok-text">TikTok</div>
+                                </div>
+                                <div class="tiktok-video">
+                                    <div class="tiktok-overlay">
+                                        <div class="tiktok-username">@deinname</div>
+                                        <div class="tiktok-caption">#heimweh 🎵 Wen vermisst du?</div>
+                                        <div class="tiktok-song">
+                                            <div class="tiktok-disc"></div>
+                                            <div class="tiktok-song-name">Heimweh - Dorian & D1NO</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tiktok-actions">
+                                    <div class="tiktok-action"><i class="fas fa-heart"></i> <span>12.5K</span></div>
+                                    <div class="tiktok-action"><i class="fas fa-comment"></i> <span>340</span></div>
+                                    <div class="tiktok-action"><i class="fas fa-share"></i> <span>210</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tiktok-text-content reveal-element" data-delay="0.3">
+                    <h2>MACH MIT BEI DER HEIMWEH CHALLENGE</h2>
+                    <p>Erstelle ein TikTok-Video mit dem Song, zeige deine kreative Interpretation und sichere dir die Chance auf einen unserer exklusiven Preise!</p>
+                    <div class="tiktok-step">
+                        <div class="tiktok-step-number">1</div>
+                        <div class="tiktok-step-text">Öffne TikTok und suche nach dem Sound "Heimweh"</div>
+                    </div>
+                    <div class="tiktok-step">
+                        <div class="tiktok-step-number">2</div>
+                        <div class="tiktok-step-text">Erstelle dein Video mit dem Sound</div>
+                    </div>
+                    <div class="tiktok-step">
+                        <div class="tiktok-step-number">3</div>
+                        <div class="tiktok-step-text">Füge den Hashtag #heimweh hinzu</div>
+                    </div>
+                    <a href="https://vm.tiktok.com/ZNd23p1tF/" class="tiktok-sound-button" target="_blank">SOUND VERWENDEN <i class="fas fa-music"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-waves"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">HEIMWEH <span>CHALLENGE</span></div>
+                    <p class="footer-slogan">Zeige uns, wen oder was du vermisst und gewinne exklusive Preise!</p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">LINKS</h3>
+                    <ul class="footer-links">
+                        <li><a href="#challenge">Challenge</a></li>
+                        <li><a href="#lyrics">Lyrics</a></li>
+                        <li><a href="#prizes">Preise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">FOLGE UNS</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/iconxmade/?hl=de" class="social-link" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.tiktok.com/@iconxmade?lang=de-DE" class="social-link" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://www.youtube.com/@ICONxMADE" class="social-link" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2024 Heimweh Challenge. Alle Rechte vorbehalten.</div>
+                <div class="made-with">
+                    Mit <i class="fas fa-heart"></i> erstellt für die Musik-Community
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
